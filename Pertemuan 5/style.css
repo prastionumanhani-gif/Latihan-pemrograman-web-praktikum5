@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background:#1f4e79;
+    color: white; 
+}
+// posisi judul (logo) dan menu navigasi akan berada di sisi yang berlawanan, yaitu judul di sebelah kiri dan menu di sebelah kanan
+posisi judul (logo) dan menu navigasi akan berada di tengah, yaitu judul dan menu berada di tengah
+posisi judul (logo) dan menu navigasi akan berkumpul di sebelah kiri header.
+posisi judul (logo) dan menu navigasi akan memiliki jarak di sekeliling masing-masing elemen. Keduanya terlihat lebih menyebar di dalam header. //
+
+
+.logo{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    gap: 16px;
+}
+
+nav a{
+    color: white;
+    text-decoration: 0;
+}
+
+footer{
+    padding: 16px;
+    background: #eeeeee;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+//  repeat(3, 1fr)	Tiga kartu sejajar dalam satu baris dengan lebar sama (sama dengan 1fr 1fr 1fr).
+    2fr 1fr 1fr	Kartu pertama dua kali lebih lebar dari yang lain (proporsi 50% : 25% : 25%).
+    gap: 40px	Jarak antar kartu jadi 40px, baik ke samping maupun ke bawah. //
+
+.kartu{
+    border: 1px solid#cccccc;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.kartu h3{
+    margin-top: 0;
+}
+
+@media(min-width: 600px){
+    main{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(min-width:992px){
+    main{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 599px){
+    header{
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+//  357px 1 menumpuk ke bawah (kolom)
+    700px 2 berjajar menyamping (baris)
+    1200px 3 berjajar menyamping baris //
